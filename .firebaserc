@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "niwasaki-94c38": {
+      "hosting": {
+        "niwasaki": [
+          "niwasaki-94c38"
+        ]
+      }
+    }
+  }
+}
