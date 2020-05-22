@@ -8,6 +8,14 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () => import('./top/top.module').then((m) => m.TopModule),
   },
+
+  {
+    path: 'registration',
+    loadChildren: () =>
+      import('./registration/registration.module').then(
+        (m) => m.RegistrationModule
+      ),
+  },
 ];
 
 @NgModule({
