@@ -1,0 +1,44 @@
+<h1>会員ログイン</h1>
+
+<div class="rogin">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="rogin__form">
+    <mat-form-field class="rogin__fullwidth">
+      <mat-label>メールアドレス</mat-label>
+      <input
+        formControlName="mail"
+        type="email"
+        matInput
+        autocomplete="email"
+        required
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="rogin__fullwidth">
+      <mat-label>パスワード</mat-label>
+      <input
+        formControlName="password"
+        type="password"
+        matInput
+        autocomplete="off"
+        required
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+    </mat-form-field>
+
+    <p class="forget">パスワードを忘れた方</p>
+
+    <div class="in">
+      <button [disabled]="form.invalid" mat-raised-button color="primary">
+        ログイン
+      </button>
+    </div>
+    <div class="sign_up">
+      <button mat-raised-button color="accent">新規会員登録する</button>
+    </div>
+  </form>
+</div>

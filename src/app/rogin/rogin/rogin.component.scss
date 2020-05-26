@@ -1,0 +1,41 @@
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.rogin {
+  width: 350px;
+  height: 450px;
+  background-color: azure;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__form {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 42px;
+  }
+
+  &__fullwidth {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.forget {
+  text-align: center;
+  padding-top: 42px;
+}
+
+.in {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.sign_up {
+  text-align: center;
+}

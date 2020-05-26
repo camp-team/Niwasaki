@@ -16,6 +16,12 @@ const routes: Routes = [
         (m) => m.RegistrationModule
       ),
   },
+
+  {
+    path: 'rogin',
+    loadChildren: () =>
+      import('./rogin/rogin.module').then((m) => m.RoginModule),
+  },
 ];
 
 @NgModule({
