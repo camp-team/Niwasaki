@@ -4,7 +4,14 @@
       <span class="header__Logo">NIWASAKI</span>
     </mat-toolbar-row>
   </mat-toolbar>
-  <button mat-raised-button color="primary">ログイン</button>
+  <button
+    [routerLink]="['/rogin']"
+    routerLinkActive="router-link-active"
+    mat-raised-button
+    color="primary"
+  >
+    ログイン
+  </button>
 </div>
 
 <router-outlet></router-outlet>
