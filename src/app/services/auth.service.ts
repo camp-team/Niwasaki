@@ -5,6 +5,7 @@ import { auth } from 'firebase/app';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { User } from '../interfaces/user';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,11 @@ export class AuthService {
     })
   );
 
-  constructor(public afAuth: AngularFireAuth, private db: AngularFirestore) {}
+  constructor(
+    public afAuth: AngularFireAuth,
+    private db: AngularFirestore,
+    private router: Router
+  ) {}
 
   login() {
     const provider = new auth.GoogleAuthProvider();
@@ -30,5 +35,6 @@ export class AuthService {
 
   logout() {
     this.afAuth.signOut();
+    this.router.navigateByUrl('/');
   }
 }
