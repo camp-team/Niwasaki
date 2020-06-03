@@ -51,5 +51,21 @@
     <div class="confirm">
       <button mat-raised-button color="primary">登録する</button>
     </div>
+
+    <div class="logout">
+      <button (click)="logout()" mat-raised-button color="basic">
+        ログアウト
+      </button>
+    </div>
+
+    <div class="google-button">
+      <p (click)="login()">
+        <input
+          type="image"
+          src="/assets/images/btn_google_signin_light_normal_web.png"
+          alt="送信する"
+        />
+      </p>
+    </div>
   </form>
 </div>
