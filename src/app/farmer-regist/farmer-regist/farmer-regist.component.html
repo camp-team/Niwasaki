@@ -1,0 +1,75 @@
+<h1>会員情報登録</h1>
+
+<div class="register">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="register__form">
+    <mat-form-field class="register__fullwidth">
+      <mat-label>お名前</mat-label>
+      <input
+        formControlName="name"
+        type="text"
+        matInput
+        autocomplete="name"
+        required
+        placeholder="例　山田太郎"
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+      <mat-error *ngIf="nameControl.hasError('maxlength')"
+        >長すぎます</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="register__fullwidth">
+      <mat-label>メールアドレス</mat-label>
+      <input
+        formControlName="mail"
+        type="email"
+        matInput
+        autocomplete="email"
+        required
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="register__fullwidth">
+      <mat-label>電話番号</mat-label>
+      <input
+        formControlName="tel"
+        type="tel"
+        matInput
+        autocomplete="off"
+        required
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="register__fullwidth">
+      <mat-label>パスワード</mat-label>
+      <input
+        formControlName="password"
+        type="password"
+        matInput
+        autocomplete="off"
+        required
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <mat-select>
+        </mat-select>
+      </mat-form-field>
+  
+
+   
+    <div class="confirm">
+      <button mat-raised-button color="primary">登録する</button>
+    </div>
