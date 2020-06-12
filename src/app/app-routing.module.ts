@@ -28,12 +28,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./main/main.module').then((m) => m.MainModule),
   },
-  
-  {
-    path: 'farmer-regist',
-    loadChildren: () =>
-      import('./farmer-regist/farmer-regist.module').then((m) => m.FarmerRegistModule),
-  },
 ];
 
 @NgModule({
