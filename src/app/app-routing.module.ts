@@ -22,17 +22,21 @@ const routes: Routes = [
     loadChildren: () =>
       import('./rogin/rogin.module').then((m) => m.RoginModule),
   },
-  
+
   {
     path: 'main',
-    loadChildren: () =>
-      import('./main/main.module').then((m) => m.MainModule),
+    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
   },
-  
+
   {
     path: 'about',
     loadChildren: () =>
       import('./about/about.module').then((m) => m.AboutModule),
+  },
+  {
+    path: 'regi-vege',
+    loadChildren: () =>
+      import('./regi-vege/regi-vege.module').then((m) => m.RegiVegeModule),
   },
 ];
 
