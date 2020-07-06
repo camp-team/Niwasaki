@@ -1,0 +1,20 @@
+<div class="top">
+  <p class="top__now">今あるものは？</p>
+
+  <div class="select">
+    <div *ngFor="let vegelists of vegelist">
+      <mat-checkbox class="select__vege">{{ vegelists }}</mat-checkbox>
+    </div>
+  </div>
+
+  <p class="top__today">今日の様子を投稿する</p>
+
+  <div class="box">
+    <p>写真を追加</p>
+  </div>
+
+  <p class="recommended">おすすめ情報等記入欄</p>
+  <textarea name="text" id="" cols="30" rows="10"></textarea>
+
+  <button mat-raised-button color="warn">登録する</button>
+</div>
