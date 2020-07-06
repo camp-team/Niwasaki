@@ -1,70 +1,11 @@
 <div class="top">
   <p class="top__now">今あるものは？</p>
 
-  <section class="select">
-    <mat-checkbox class="select__vege">人参</mat-checkbox>
-    <mat-checkbox class="select__vege">玉ねぎ</mat-checkbox>
-    <mat-checkbox class="select__vege">じゃがいも</mat-checkbox>
-    <mat-checkbox class="select__vege">ナス</mat-checkbox>
-    <mat-checkbox class="select__vege">ピーマン</mat-checkbox>
-    <mat-checkbox class="select__vege">白菜</mat-checkbox>
-    <mat-checkbox class="select__vege">アスパラガス</mat-checkbox>
-    <mat-checkbox class="select__vege">かぼちゃ</mat-checkbox>
-    <mat-checkbox class="select__vege">いんげん</mat-checkbox>
-    <mat-checkbox class="select__vege">枝豆</mat-checkbox>
-    <mat-checkbox class="select__vege">オクラ</mat-checkbox>
-    <mat-checkbox class="select__vege">かぶ</mat-checkbox>
-    <mat-checkbox class="select__vege">キャベツ</mat-checkbox>
-    <mat-checkbox class="select__vege">ブロッコリー</mat-checkbox>
-    <mat-checkbox class="select__vege">カリフラワー</mat-checkbox>
-    <mat-checkbox class="select__vege">レタス</mat-checkbox>
-    <mat-checkbox class="select__vege">キュウリ</mat-checkbox>
-    <mat-checkbox class="select__vege">ゴーヤ</mat-checkbox>
-    <mat-checkbox class="select__vege">小松菜</mat-checkbox>
-    <mat-checkbox class="select__vege">チンゲンサイ</mat-checkbox>
-    <mat-checkbox class="select__vege">ゴボウ</mat-checkbox>
-    <mat-checkbox class="select__vege">さつま芋</mat-checkbox>
-    <mat-checkbox class="select__vege">里芋</mat-checkbox>
-    <mat-checkbox class="select__vege">ししとう</mat-checkbox>
-    <mat-checkbox class="select__vege">シソ</mat-checkbox>
-    <mat-checkbox class="select__vege">春菊</mat-checkbox>
-    <mat-checkbox class="select__vege">生姜</mat-checkbox>
-    <mat-checkbox class="select__vege">ズッキーニ</mat-checkbox>
-    <mat-checkbox class="select__vege">セロリ</mat-checkbox>
-    <mat-checkbox class="select__vege">そら豆</mat-checkbox>
-    <mat-checkbox class="select__vege">大根</mat-checkbox>
-    <mat-checkbox class="select__vege">トウガラシ</mat-checkbox>
-    <mat-checkbox class="select__vege">冬瓜</mat-checkbox>
-    <mat-checkbox class="select__vege">トマト</mat-checkbox>
-    <mat-checkbox class="select__vege">ニラ</mat-checkbox>
-    <mat-checkbox class="select__vege">ニンニク</mat-checkbox>
-    <mat-checkbox class="select__vege">ネギ</mat-checkbox>
-    <mat-checkbox class="select__vege">パクチー</mat-checkbox>
-    <mat-checkbox class="select__vege">パセリ</mat-checkbox>
-    <mat-checkbox class="select__vege">パプリカ</mat-checkbox>
-    <mat-checkbox class="select__vege">ビーツ</mat-checkbox>
-    <mat-checkbox class="select__vege">ほうれん草</mat-checkbox>
-    <mat-checkbox class="select__vege">みょうが</mat-checkbox>
-    <mat-checkbox class="select__vege">水菜</mat-checkbox>
-    <mat-checkbox class="select__vege">もやし</mat-checkbox>
-    <mat-checkbox class="select__vege">モロヘイヤ</mat-checkbox>
-    <mat-checkbox class="select__vege">レンコン</mat-checkbox>
-    <mat-checkbox class="select__vege">エシャロット</mat-checkbox>
-    <mat-checkbox class="select__vege">空芯菜</mat-checkbox>
-    <mat-checkbox class="select__vege">カラシ菜</mat-checkbox>
-    <mat-checkbox class="select__vege">グリンピース</mat-checkbox>
-    <mat-checkbox class="select__vege">タアサイ</mat-checkbox>
-    <mat-checkbox class="select__vege">つる紫</mat-checkbox>
-    <mat-checkbox class="select__vege">フキ</mat-checkbox>
-    <mat-checkbox class="select__vege">山芋</mat-checkbox>
-    <mat-checkbox class="select__vege">ヤーコン</mat-checkbox>
-    <mat-checkbox class="select__vege">ラッキョウ</mat-checkbox>
-    <mat-checkbox class="select__vege">三つ葉</mat-checkbox>
-    <mat-checkbox class="select__vege">ゆり根</mat-checkbox>
-    <mat-checkbox class="select__vege">ルッコラ</mat-checkbox>
-    <mat-checkbox class="select__vege">竹の子</mat-checkbox>
-    <mat-checkbox class="select__vege">チコリー</mat-checkbox>
-  </section>
+  <div class="select">
+    <div *ngFor="let vegelists of vegelist">
+      <mat-checkbox class="select__vege">{{ vegelists }}</mat-checkbox>
+    </div>
+  </div>
 
   <p class="top__today">今日の様子を投稿する</p>
 
