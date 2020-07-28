@@ -39,9 +39,9 @@ const routes: Routes = [
       import('./regi-vege/regi-vege.module').then((m) => m.RegiVegeModule),
   },
   {
-    path: 'serect',
+    path: 'select',
     loadChildren: () =>
-      import('./serect/serect.module').then((m) => m.SerectModule),
+      import('./select/select.module').then((m) => m.SelectModule),
   },
 ];
 

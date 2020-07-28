@@ -11,9 +11,9 @@
   <h2>サイト設定</h2>
 
   <div class="selectwrap">
-    <div *ngFor="let selectbuttons of selectbutton">
-      <div class="serectbox">
-        <p class="serectbox__text">{{ selectbuttons }}</p>
+    <div *ngFor="let selectButtonLabel of selectButtonLabels">
+      <div class="selectbox">
+        <p class="selectbox__text">{{ selectButtonLabel }}</p>
       </div>
     </div>
   </div>

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SerectComponent } from './serect/serect.component';
+import { SelectComponent } from './select/select.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: SerectComponent,
+    component: SelectComponent,
   },
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SerectRoutingModule {}
+export class SelectRoutingModule {}
