@@ -1,0 +1,20 @@
+<div class="wrap">
+  <h1>リアルタイム情報登録</h1>
+
+  <div routerLink="/regi-vege" class="realtimebox">
+    <p class="realtimebox__text">
+      今現在の販売所の様子・おすすめなどを投稿してみましょう！
+    </p>
+    <button mat-raised-button color="warn">投稿画面へ</button>
+  </div>
+
+  <h2>サイト設定</h2>
+
+  <div class="selectwrap">
+    <div *ngFor="let selectbuttons of selectbutton">
+      <div class="serectbox">
+        <p class="serectbox__text">{{ selectbuttons }}</p>
+      </div>
+    </div>
+  </div>
+</div>

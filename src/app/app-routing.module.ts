@@ -38,6 +38,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./regi-vege/regi-vege.module').then((m) => m.RegiVegeModule),
   },
+  {
+    path: 'serect',
+    loadChildren: () =>
+      import('./serect/serect.module').then((m) => m.SerectModule),
+  },
 ];
 
 @NgModule({
