@@ -38,6 +38,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./regi-vege/regi-vege.module').then((m) => m.RegiVegeModule),
   },
+  {
+    path: 'select',
+    loadChildren: () =>
+      import('./select/select.module').then((m) => m.SelectModule),
+  },
 ];
 
 @NgModule({
