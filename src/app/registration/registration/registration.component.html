@@ -3,9 +3,27 @@
 <div class="register">
   <form [formGroup]="form" (ngSubmit)="submit()" class="register__form">
     <mat-form-field class="register__fullwidth">
+      <mat-label>お名前</mat-label>
+      <input
+        formControlName="name"
+        type="text"
+        matInput
+        autocomplete="name"
+        required
+        placeholder="例　山田太郎"
+      />
+      <mat-error *ngIf="nameControl.hasError('required')"
+        >必須入力です</mat-error
+      >
+      <mat-error *ngIf="nameControl.hasError('maxlength')"
+        >長すぎます</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="register__fullwidth">
       <mat-label>メールアドレス</mat-label>
       <input
-        formControlName="email"
+        formControlName="mail"
         type="email"
         matInput
         autocomplete="email"
@@ -34,10 +52,20 @@
       <button mat-raised-button color="primary">登録する</button>
     </div>
 
-    <div class="google-button">
-      <button type="button" (click)="login()" mat-raised-button>
-        Googleで登録する
+    <div class="logout">
+      <button (click)="logout()" mat-raised-button color="basic">
+        ログアウト
       </button>
+    </div>
+
+    <div class="google-button">
+      <p (click)="login()">
+        <input
+          type="image"
+          src="/assets/images/btn_google_signin_light_normal_web.png"
+          alt="送信する"
+        />
+      </p>
     </div>
   </form>
 </div>
