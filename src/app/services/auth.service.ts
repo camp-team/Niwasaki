@@ -66,4 +66,30 @@ export class AuthService {
         }
       });
   }
+
+  userLogin(params: { email: string; password: string }) {
+    this.afAuth
+      .signInWithEmailAndPassword(params.email, params.password)
+      .then((result) => {
+        result.user.sendEmailVerification();
+        this.snackBar.open('ログインしました', null, {
+          duration: 2000,
+        });
+        this.router.navigateByUrl('/main');
+      })
+      .catch((error) => {
+        switch (error.code) {
+          case 'auth/user-not-found':
+            alert('このメールアドレスのユーザーは見つかりません');
+            break;
+          case 'auth/wrong-password':
+            alert('パスワードが間違っています');
+            break;
+          case 'auth/invalid-email':
+            alert('メールアドレスが不正です');
+            break;
+        }
+        console.log(error);
+      });
+  }
 }
