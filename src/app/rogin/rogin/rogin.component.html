@@ -5,7 +5,7 @@
     <mat-form-field class="rogin__fullwidth">
       <mat-label>メールアドレス</mat-label>
       <input
-        formControlName="mail"
+        formControlName="email"
         type="email"
         matInput
         autocomplete="email"
@@ -32,13 +32,25 @@
 
     <p class="forget">パスワードを忘れた方</p>
 
-    <div class="in">
+    <div class="login">
       <button [disabled]="form.invalid" mat-raised-button color="primary">
         ログイン
       </button>
     </div>
+
+    <button type="button" (click)="login()" mat-raised-button color="Basic">
+      Googleでログインする
+    </button>
+
     <div class="sign_up">
-      <button mat-raised-button color="accent">新規会員登録する</button>
+      <button
+        routerLink="/registration"
+        type="button"
+        mat-raised-button
+        color="accent"
+      >
+        新規会員登録する
+      </button>
     </div>
   </form>
 </div>

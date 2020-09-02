@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormControl } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/interfaces/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rogin',
@@ -8,19 +12,33 @@ import { Validators, FormBuilder, FormControl } from '@angular/forms';
 })
 export class RoginComponent implements OnInit {
   form = this.fb.group({
-    mail: ['', [Validators.required]],
-    password: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.maxLength(254)]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
   get nameControl() {
-    return this.form.get('mail') as FormControl;
+    return this.form.get('email') as FormControl;
   }
 
-  constructor(private fb: FormBuilder) {}
+  user$: Observable<User> = this.authService.user$;
+
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
   submit() {
-    console.log(this.form.value);
+    const value: { email: string; password: string } = {
+      email: this.form.value.email,
+      password: this.form.value.password,
+    };
+    this.authService.userLogin(value);
+  }
+
+  login() {
+    this.authService.login();
   }
 }
