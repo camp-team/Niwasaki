@@ -4,14 +4,28 @@
       <span class="header__Logo">NIWASAKI</span>
     </mat-toolbar-row>
   </mat-toolbar>
-  <button
-    [routerLink]="['/rogin']"
-    routerLinkActive="router-link-active"
-    mat-raised-button
-    color="primary"
-  >
-    ログイン
-  </button>
+
+  <div class="avatar" *ngIf="user$ | async; else loginBlock">
+    <button
+      mat-raised-button
+      color="Basic"
+      (click)="logout()"
+      class="avatar__logoutbtn"
+    >
+      ログアウト
+    </button>
+  </div>
+
+  <ng-template #loginBlock>
+    <button
+      [routerLink]="['/rogin']"
+      routerLinkActive="router-link-active"
+      mat-raised-button
+      color="primary"
+    >
+      ログイン
+    </button>
+  </ng-template>
 </div>
 
 <router-outlet></router-outlet>
